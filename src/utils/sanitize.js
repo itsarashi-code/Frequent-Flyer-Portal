@@ -1,3 +1,4 @@
 export const sanitizeInput = (text = "") => {
-  return text.replace(/[<>]/g, "");
+    const value = String(text ?? "");
+    return value.replace(/[<>]/g, "").trim();
 };
